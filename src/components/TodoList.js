@@ -1,6 +1,8 @@
 import React from "react";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
 
 /*
   TodoMVC
@@ -76,35 +78,26 @@ export default class TodoList extends React.Component {
     return (
       <div>
         <TodoForm onSubmit={this.addTodo} />
-        {todos.map(todo => (
-          <Todo
-            key={todo.id}
-            toggleComplete={() => this.toggleComplete(todo.id)}
-            onDelete={() => this.handleDeleteTodo(todo.id)}
-            todo={todo}
-          />
-        ))}
-        <div>
-          todos left: {this.state.todos.filter(todo => !todo.complete).length}
-        </div>
-        <div>
-          <button onClick={() => this.updateTodoToShow("all")}>all</button>
-          <button onClick={() => this.updateTodoToShow("active")}>
-            active
-          </button>
-          <button onClick={() => this.updateTodoToShow("complete")}>
-            complete
-          </button>
+      
+
+        <div className="buttons">
+          <Button onClick={() => this.updateTodoToShow("all")}>all</Button>
+          <Button onClick={() => this.updateTodoToShow("active")}>
+            Active
+          </Button>
+          <Button onClick={() => this.updateTodoToShow("complete")}>
+            Complete
+          </Button>
         </div>
         {this.state.todos.some(todo => todo.complete) ? (
           <div>
-            <button onClick={this.removeAllTodosThatAreComplete}>
-              remove all complete todos
-            </button>
+            <Button onClick={this.removeAllTodosThatAreComplete}>
+              Remove All Complete Todos
+            </Button>
           </div>
         ) : null}
         <div>
-          <button
+          <Button
             onClick={() =>
               this.setState(state => ({
                 todos: state.todos.map(todo => ({
@@ -115,10 +108,25 @@ export default class TodoList extends React.Component {
               }))
             }
           >
-            toggle all complete: {`${this.state.toggleAllComplete}`}
-          </button>
+            Mark All Tasks Complete
+          </Button>
+        </div>
+        <div className="todos">
+        {todos.map(todo => (
+          <Todo
+            key={todo.id}
+            toggleComplete={() => this.toggleComplete(todo.id)}
+            onDelete={() => this.handleDeleteTodo(todo.id)}
+            todo={todo}
+          />
+        ))}
+        </div>
+        <div className="todos-left">
+          Todos Left: {this.state.todos.filter(todo => !todo.complete).length}
         </div>
       </div>
     );
   }
 }
+
+//toggle all complete: {`${this.state.toggleAllComplete}`}

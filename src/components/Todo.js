@@ -1,7 +1,9 @@
 import React from "react";
+import { Icon, Button } from 'antd';
+import 'antd/dist/antd.css';
 
 export default props => (
-  <div style={{ display: "flex", justifyContent: "center" }}>
+  <div style={{ display: "flex", justifyContent: "center", padding: '10px' }}>
     <div
       style={{
         textDecoration: props.todo.complete ? "line-through" : ""
@@ -10,6 +12,6 @@ export default props => (
     >
       {props.todo.text}
     </div>
-    <button onClick={props.onDelete}>x</button>
+    <Button type='danger' size='small' onClick={props.onDelete}><Icon type="close" /></Button>
   </div>
 );

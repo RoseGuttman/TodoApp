@@ -38,3 +38,19 @@
 .visible {
   background-color: #f2f2f2;
 }
+
+.add {
+  padding: 20px;
+  background-color: aquamarine;
+}
+
+.todos {
+  padding: 20px;
+  font-size: large;
+}
+
+.buttons {
+  padding: 5px;
+  
+
+}

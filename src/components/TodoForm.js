@@ -1,5 +1,8 @@
 import React from "react";
 import shortid from "shortid";
+import { Button, Icon } from 'antd';
+import 'antd/dist/antd.css';
+import DatePicker from 'react-date-picker'
 
 export default class TodoForm extends React.Component {
   state = {
@@ -24,16 +27,22 @@ export default class TodoForm extends React.Component {
     });
   };
 
+  onChange = date => this.setState({ date })
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='add' onSubmit={this.handleSubmit}>
         <input
           name="text"
           value={this.state.text}
           onChange={this.handleChange}
           placeholder="todo..."
         />
-        <button onClick={this.handleSubmit}>add todo</button>
+         <DatePicker
+          onChange={this.onChange}
+          value={this.state.date}
+        />
+        <Button onClick={this.handleSubmit}><Icon type="plus" /></Button>
       </form>
     );
   }
