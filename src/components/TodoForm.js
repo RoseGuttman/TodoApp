@@ -6,7 +6,8 @@ import DatePicker from 'react-date-picker'
 
 export default class TodoForm extends React.Component {
   state = {
-    text: ""
+    text: "",
+    date: new Date()
   };
 
   handleChange = event => {

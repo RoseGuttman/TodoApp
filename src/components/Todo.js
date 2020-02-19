@@ -11,6 +11,7 @@ export default props => (
       onClick={props.toggleComplete}
     >
       {props.todo.text}
+      {props.todo.date}
     </div>
     <Button type='danger' size='small' onClick={props.onDelete}><Icon type="close" /></Button>
   </div>
