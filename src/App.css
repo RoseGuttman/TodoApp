@@ -51,6 +51,13 @@
 
 .buttons {
   padding: 5px;
-  
+}
 
+.todo-name {
+  display: inline-flex;
+  padding: 3px;
+}
+
+.todo-date {
+  font-size: small;
 }

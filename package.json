@@ -5,9 +5,14 @@
   "dependencies": {
     "@material-ui/core": "^4.9.3",
     "antd": "^3.26.11",
+    "moment": "^2.24.0",
     "react": "^16.5.0",
+    "react-big-calendar": "^0.24.0",
+    "react-calendar": "^2.19.2",
     "react-date-picker": "^7.10.0",
     "react-dom": "^16.5.0",
+    "react-google-calendar-api": "^1.0.11",
+    "react-moment": "^0.9.7",
     "react-scripts": "1.1.5",
     "shortid": "^2.2.13"
   },
