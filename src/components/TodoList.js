@@ -3,6 +3,7 @@ import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 import { Button } from 'antd';
 import 'antd/dist/antd.css';
+import Calendars from "./Calendar"
 //import ApiCalendar from 'react-google-calendar-api';
 
 
@@ -127,7 +128,7 @@ export default class TodoList extends React.Component {
           Todos Left: {this.state.todos.filter(todo => !todo.complete).length}
         </div>
 
-        
+        <Calendars/>
       </div>
     );
   }
