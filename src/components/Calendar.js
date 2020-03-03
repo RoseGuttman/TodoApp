@@ -35,10 +35,10 @@ export default class Calendars extends React.Component {
         //events={this.state.events}
       ///>
 
-      <div style={{ height: '500pt'}}>
+      <div className="cal">
           <Calendar
             events={this.state.events}
-            style={{height: '420px'}}
+            style={{height: '420px', width: '420px'}}
             startAccessor="start"
             endAccessor="end"
             defaultDate={moment().toDate()}

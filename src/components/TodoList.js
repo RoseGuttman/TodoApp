@@ -127,8 +127,9 @@ export default class TodoList extends React.Component {
         <div className="todos-left">
           Todos Left: {this.state.todos.filter(todo => !todo.complete).length}
         </div>
-
-        <Calendars/>
+        
+          <Calendars/>
+        
       </div>
     );
   }

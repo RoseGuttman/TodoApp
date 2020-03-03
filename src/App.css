@@ -1,5 +1,13 @@
+body{
+  background-image: url("https://wallpaperfm.com/img/original/f/9/e/59135.jpg");
+  background-color: aquamarine;
+}
+
 .App {
   text-align: center;
+  
+  align-items: center;
+  
 }
 
 .App-logo {
@@ -41,12 +49,16 @@
 
 .add {
   padding: 20px;
-  background-color: aquamarine;
+  /*background-color: aquamarine;*/
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: azure;
 }
 
 .todos {
   padding: 20px;
   font-size: large;
+  color: white;
 }
 
 .buttons {
@@ -60,4 +72,16 @@
 
 .todo-date {
   font-size: small;
+}
+
+.cal {
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  height: 420px;
+  width: 420px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  
 }
