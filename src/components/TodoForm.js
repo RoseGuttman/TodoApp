@@ -21,6 +21,7 @@ export default class TodoForm extends React.Component {
     this.props.onSubmit({
       id: shortid.generate(),
       text: this.state.text,
+      date: this.state.date,
       complete: false
     });
     this.setState({
@@ -45,6 +46,7 @@ export default class TodoForm extends React.Component {
         />
         <Button onClick={this.handleSubmit}><Icon type="plus" /></Button>
       </form>
+      
     );
   }
 }
